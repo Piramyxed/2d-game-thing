@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://yoofpc6htlur"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xc7r2"]
+size = Vector2(2, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vybhm"]
+size = Vector2(20, 50)
+
+[node name="level1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 502)
+scale = Vector2(50, 1)
+
+[node name="floor" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(10, 50)
+texture = SubResource("PlaceholderTexture2D_xc7r2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_vybhm")
+
+[node name="Ramp1" type="StaticBody2D" parent="."]
+position = Vector2(615, 397)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ramp1"]
+color = Color(0.16078432, 0.50980395, 1, 1)
+polygon = PackedVector2Array(58, 0, 250, 0, 250, 120, -146, 120)
+uv = PackedVector2Array(-56, -11, 250, -10, 250, 120, -146, 121)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ramp1"]
+polygon = PackedVector2Array(-146, 120, 250, 120, 250, 0, 58, 0)
