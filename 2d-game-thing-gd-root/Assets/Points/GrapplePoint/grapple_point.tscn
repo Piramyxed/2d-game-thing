@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6glmgixjhgj8"]
+
+[ext_resource type="Texture2D" uid="uid://jv808xvkp6dp" path="res://icon.svg" id="1_clodv"]
+[ext_resource type="Script" uid="uid://cmyvphkyqvgeo" path="res://Assets/Points/GrapplePoint/grapple_point.gd" id="1_rtk65"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c58ir"]
+radius = 50.0
+
+[node name="grapplePoint" type="Area2D"]
+script = ExtResource("1_rtk65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c58ir")
+
+[node name="pointSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_clodv")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
