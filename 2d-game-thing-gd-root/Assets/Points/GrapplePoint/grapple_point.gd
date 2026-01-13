@@ -2,9 +2,9 @@ extends Area2D
 
 @onready var icon = $pointSprite
 var active = false
-var holdMouse
+var mouse_held = false
 
-func _process(delta):
+func _process(_delta):
 	if active:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			SignalBus.emit_signal("grapple", get_process_delta_time())

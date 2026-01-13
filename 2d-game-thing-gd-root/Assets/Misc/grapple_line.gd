@@ -14,7 +14,7 @@ func _draw():
 	draw_line(point_pos, player_pos, line_color, line_width)
 
 
-func _process(delta):
+func _process(_delta):
 	queue_redraw()
 
 
