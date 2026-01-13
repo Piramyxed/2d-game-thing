@@ -48,4 +48,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func grapple(delta):
-	print("Grappling")
+	SignalBus.emit_signal("update_grapple_line", Vector2.ZERO, global_position, true)

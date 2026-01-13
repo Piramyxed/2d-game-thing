@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkwprrlpvb8ba"]
+
+[ext_resource type="Script" uid="uid://crgi3q86e7w64" path="res://Assets/Misc/grapple_line.gd" id="1_2fo41"]
+
+[node name="grapple_line" type="Node2D"]
+script = ExtResource("1_2fo41")
